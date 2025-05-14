@@ -18,6 +18,44 @@
         </header>
 
         <main>
+            <p style="margin-top: 120px"></p>
+  
+  <h1>Liste des Animaux Marins</h1>
+
+  <!-- FILTRES -->
+  <div class="filtres">
+    <label><input type="checkbox" class="filtre" value="mammifere"> Mammifère</label>
+    <label><input type="checkbox" class="filtre" value="poisson"> Poisson</label>
+    <label><input type="checkbox" class="filtre" value="crustace"> Crustacé</label>
+    <label><input type="checkbox" class="filtre" value="protégé"> Protégé</label>
+    <label><input type="checkbox" class="filtre" value="menacé"> Menacé</label>
+    <button id="reset-filtres">Effacer les filtres</button>
+  </div>
+
+  <!-- GRILLE -->
+  <div class="grille-animaux">
+    <div class="animal" data-tags="mammifere protégé">
+      <img src="../img/sea.jpg" alt="Dauphin">
+      <p>Dauphin</p>
+    </div>
+    <div class="animal" data-tags="poisson menacé">
+      <img src="../img/sea.jpg" alt="Thon Rouge">
+      <p>Thon Rouge</p>
+    </div>
+    <div class="animal" data-tags="crustace">
+      <img src="../img/sea.jpg" alt="Crabe">
+      <p>Crabe</p>
+    </div>
+    <div class="animal" data-tags="mammifere">
+      <img src="../img/orca.jpg" alt="Baleine">
+      <p>Baleine</p>
+    </div>
+    <div class="animal" data-tags="poisson">
+      <img src="../img/sea.jpg" alt="Raie Manta">
+      <p>Raie Manta</p>
+    </div>
+    <!-- Ajoute d'autres animaux ici -->
+  </div>
 
         </main>
 

@@ -96,6 +96,10 @@ main section {
     border-radius: 10px;
 }
 
+
+/*----------------------------------------------------------------------------------------------------*/
+
+
 #accueil-1-section {
   background-color: rgb(255, 255, 255);
   margin-top: 120px;
@@ -129,6 +133,57 @@ main section {
 
 
 }
+
+
+/*----------------------------------------------------------------------------------------------------*/
+
+.filtres {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 20px;
+      align-items: center;
+    }
+
+    .filtres label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .grille-animaux {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .animal {
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .animal img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+
+    button#reset-filtres {
+      padding: 5px 10px;
+      background-color: crimson;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+
+
+    
+
+/*----------------------------------------------------------------------------------------------------*/
 
 
 main section p{
