@@ -1,11 +1,16 @@
+html {
+    background-color: rgb(255, 255, 255);
+}
+
 /* Réinitialisation */
 body {
+  background-color: rgb(0, 128, 255);
   margin: 0;
   font-family: sans-serif;
 }
 
 /* HEADER fixé */
-#main-header {
+header {
   position: fixed;
   top: 0;
   left: 0;
@@ -20,35 +25,71 @@ nav {
   justify-content: space-evenly;
   align-items: center;
   height: 100px; /* Hauteur initiale */
-  background-color: rgb(0, 0, 100);
-  transition: height 0.3s ease, background-color 0.3s ease;
+  background-image: url("../img/sea.jpg"); /* Remplace par le bon chemin */
+  background-size: cover;
+  background-position: center;
+  
+  transition: height 0.3s ease, background-color 0.3s ease, background-image 0.3s ease;
+  position: relative;
+
 }
 
 /* Liens */
 nav a {
   text-decoration: none;
-  color: white;
+  color: rgb(255, 255, 255);
   font-weight: bold;
   padding: 10px 20px;
   font-size: 1.2em;
   border-radius: 10px;
   transition: background-color 0.3s, color 0.3s;
+
+
+  
 }
 
 nav a:hover {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 100);
 }
 
 /* Au scroll */
-#main-header.shrink nav {
+header.shrink nav {
   height: 60px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
+
+background-image: none;
+
+  border-bottom: 2px solid rgb(0, 0, 100); /* <-- Ajoute cette ligne */
 }
 
-#main-header.shrink nav a {
+header.shrink nav a {
   color: rgb(0, 0, 100);
+  font-size: 1.0em; /* ↓ Taille réduite */
 }
+
+
+nav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/sea.jpg"); /* Ton image */
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  transition: opacity 2s ease;
+  z-index: -1; /* Derrière les liens */
+}
+
+/* En mode réduit : fond transparent (image "disparue") */
+header.shrink nav::before {
+  opacity: 0;
+}
+
+
 
 
 test{
@@ -60,4 +101,120 @@ test{
     background-image: none;   /* supprime l’image pour plus de lisibilité */
 
 
+}
+
+
+
+section {
+    max-width: 1000px;
+    margin-top: 20px; /*Marge du haut*/
+    margin-bottom: 20px; /*Marge du bas*/
+    margin-inline: auto; /*Marge sur le côté, auto pour être au centre*/
+    background-color: rgb(100, 100, 255);
+    padding: 20px; /*Espace autour de des éléments dans section*/
+    border-radius: 10px;
+}
+
+
+
+section a {
+    color: rgb(255, 0, 150);
+    font-style: italic;
+
+}
+
+section h1 {
+    color: rgb(255, 0, 0);
+    text-align: center;
+}
+
+section h2 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+section h2 ~ h3 {
+    color: rgb(242, 127, 150);
+}
+
+section h3 {
+    color:rgb(0, 0, 0)
+}
+
+section p{
+    text-align: center;
+}
+
+
+
+
+a {
+    text-decoration-line: none;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+a:hover {
+    background-color: rgb(0, 191, 255); 
+}
+
+
+
+div {
+    margin-top: 10px;
+    margin-bottom: 10px; 
+    margin-inline: auto;
+    background-color: rgb(180, 180, 255);
+    padding: 10px; 
+    border-radius: 10px;
+}
+
+
+
+
+header img {
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+}
+
+#definition, #citation {
+    font-style: italic;
+    text-align: center;
+}
+
+
+  footer {
+  display: flex;
+  margin: 0px;
+  justify-content: space-between;
+  background-color: rgb(240, 240, 255);
+  padding: 20px;
+  border-top: 2px solid rgb(0, 0, 100);
+  font-family: sans-serif;
+}
+
+footer > div {
+  flex: 1;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+footer h3 {
+  margin-top: 0;
+  color: rgb(0, 0, 100);
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer a {
+  color: rgb(0, 0, 100);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
