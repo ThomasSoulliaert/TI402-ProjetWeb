@@ -3,9 +3,317 @@
     2. Avant d’entamer la partie programmation, il est nécessaire de préparer la charte graphique de votre site Web et de concevoir le plan du site (wireframe).
     Remarque : L’arborescence du site ne doit pas dépasser 2 niveaux.
 
+html {
+    background-color: rgb(2, 7, 110);
+}
 
-    ODD14 - Conserver et exploiter de manière durable les océans, les mers et les ressources marines aux fins du développement durable
 
-Publié le 7 février 2024
+body {
+    background-color: rgb(81, 118, 204);
+    color: rgb(0, 0, 0);
+    font-family: "Open Sans", sans-serif;
+    text-align: match-parent;
+    margin: 0px;
+    padding: 0px;
+}
 
-Le quatorzième objectif promeut la conservation et l’exploitation durable des écosystèmes marins et côtiers, selon trois ambitions fondatrices : une gestion plus durable des ressources via la préservation de 10 % des zones marines et côtières, la lutte contre la surpêche et la pêche illicite ; l’accélération des recherches scientifiques et du transfert de techniques pour renforcer la résilience des écosystèmes et réduire au maximum l’acidification des océans ; la conception de la gestion durable des ressources marines comme une opportunité de développement économique et touristique pour les petits États insulaires et les pays les moins avancées.
+
+
+
+header {
+
+
+    background-image: url("../img/sea.jpg"); 
+    background-size: cover; 
+    background-position: center;
+    color: rgb(255, 255, 255);
+    text-align: center; 
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+footer {
+    background-image: url("../img/sea.jpg"); 
+    background-size: cover; 
+    background-position: center;
+    color: rgb(255, 255, 255);
+    text-align: center; 
+    margin: 0px;
+    padding: 20px;
+}
+
+
+/* État par défaut */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(255, 0, 0);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: padding 0.3s ease, background-color 0.3s ease;
+}
+
+/* Quand on scrolle */
+nav.shrink {
+    padding: 10px; /* Plus petit */
+    background-color: #f9f9f9; /* Optionnel : couleur plus discrète */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+nav a {
+    background-color: rgb(0, 0, 100);
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+
+nav a:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 100);
+}
+
+
+
+
+
+
+section {
+    max-width: 1000px;
+    margin-top: 20px; /*Marge du haut*/
+    margin-bottom: 20px; /*Marge du bas*/
+    margin-inline: auto; /*Marge sur le côté, auto pour être au centre*/
+    background-color: rgb(31, 68, 155);
+    padding: 20px; /*Espace autour de des éléments dans section*/
+    border-radius: 10px;
+}
+
+
+
+section a {
+    color: rgb(255, 0, 150);
+    font-style: italic;
+
+}
+
+section h1 {
+    color: rgb(255, 0, 0);
+    text-align: center;
+}
+
+section h2 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+section h2 ~ h3 {
+    color: rgb(242, 127, 150);
+}
+
+section h3 {
+    color:rgb(0, 0, 0)
+}
+
+section p{
+    text-align: center;
+}
+
+
+
+
+a {
+    text-decoration-line: none;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+a:hover {
+    background-color: rgb(0, 191, 255); 
+}
+
+
+
+div {
+    margin-top: 10px;
+    margin-bottom: 10px; 
+    margin-inline: auto;
+    background-color: rgb(180, 214, 255);
+    padding: 10px; 
+    border-radius: 10px;
+}
+
+
+
+
+header img {
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+}
+
+#definition, #citation {
+    font-style: italic;
+    text-align: center;
+}
+
+
+/* post-it */
+#post-it {
+    display: flex;
+    flex-wrap: "wrap";
+    list-style-type: none;
+    justify-content: space-around;
+    padding: 0px;
+    margin: 0px;
+    text-align:center;
+}
+
+.post-it-item {
+    border-radius: 10px;
+    position: relative;
+    padding: 10px;
+    margin: 10px;
+}
+
+.post-it-item:first-child{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);    
+    font-weight: bold;    
+}
+.post-it-item:first-child:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 128, 0);    
+    font-weight: bold; 
+}
+
+.post-it-item:nth-child(2){
+    background-color: rgb(30, 30, 30);
+    color: rgb(255, 255, 255);    
+    font-weight: bold;    
+}
+.post-it-item:nth-child(2):hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 128, 0);    
+    font-weight: bold;     
+}
+
+.post-it-item:nth-child(3){
+    background-color: rgb(60, 60, 60);
+    color: rgb(255, 255, 255);   
+    font-weight: bold;    
+}
+.post-it-item:nth-child(3):hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 128, 0);    
+    font-weight: bold;   
+}
+
+.post-it-item:nth-child(4){
+    background-color: rgb(90, 90, 90);
+    color: rgb(255, 255, 255);  
+    font-weight: bold;      
+}
+.post-it-item:nth-child(4):hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 128, 0);    
+    font-weight: bold;    
+}
+
+.post-it-item:nth-child(5){
+    background-color: rgb(120, 120, 120);
+    color: rgb(255, 255, 255);  
+    font-weight: bold;      
+}
+.post-it-item:nth-child(5):hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 128, 0);    
+    font-weight: bold;  
+}
+
+
+.post-it-item ul {
+    font-weight: normal;
+    display: none;
+    position: absolute;
+    min-width: 300px;
+    z-index: 1;
+    background-color: rgb(200, 200, 200);
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align:left;
+    border-radius: 10px;
+}
+
+.post-it-item:hover ul{
+    display : block;
+}
+
+
+
+
+
+#quiz {
+    max-width: 800px;
+    margin: auto;
+}
+
+#quiz fieldset {
+    border: 2px solid rgb(0, 0, 0);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+#quiz legend {
+    font-weight: bold;
+    background-color: rgb(0, 128, 0);
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+#quiz label {
+    display: inline-block;
+    margin-top: 8px;
+}
+
+#quiz input[type="text"],
+#quiz input[type="email"],
+#quiz input[type="date"],
+#quiz select,
+#quiz textarea {
+    width: 400px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    resize: none;
+}
+
+#quiz button {
+    font-weight: bold;
+    background-color: rgb(0, 128, 0);
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px auto 20px auto; 
+    display: block;             
+}
