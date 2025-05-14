@@ -20,7 +20,7 @@ header {
 }
 
 /* NAVIGATION */
-nav {
+.header-nav {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -35,7 +35,7 @@ nav {
 }
 
 /* Liens */
-nav a {
+.header-nav a {
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-weight: bold;
@@ -48,28 +48,26 @@ nav a {
   
 }
 
-nav a:hover {
+.header-nav a:hover {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 100);
 }
 
 /* Au scroll */
-header.shrink nav {
+header.shrink .header-nav {
   height: 60px;
   background-color: rgb(255, 255, 255);
-
-background-image: none;
-
-  border-bottom: 2px solid rgb(0, 0, 100); /* <-- Ajoute cette ligne */
+  background-image: none;
+  border-bottom: 2px solid rgb(0, 0, 100);
 }
 
-header.shrink nav a {
+header.shrink .header-nav a {
   color: rgb(0, 0, 100);
   font-size: 1.0em; /* ↓ Taille réduite */
 }
 
 
-nav::before {
+.header-nav::before {
   content: "";
   position: absolute;
   top: 0;
@@ -85,27 +83,15 @@ nav::before {
 }
 
 /* En mode réduit : fond transparent (image "disparue") */
-header.shrink nav::before {
+header.shrink .header-nav::before {
   opacity: 0;
 }
 
 
+/*----------------------------------------------------------------------------------------------------*/
 
 
-test{
-    background-image: url("../img/sea.jpg"); /* lien vers l’image */
-  background-size: cover; /* adapte la taille */
-  background-position: center; /* centre l’image */
-    
-    
-    background-image: none;   /* supprime l’image pour plus de lisibilité */
-
-
-}
-
-
-
-section {
+#section-main {
     max-width: 1000px;
     margin-top: 20px; /*Marge du haut*/
     margin-bottom: 20px; /*Marge du bas*/
@@ -116,30 +102,6 @@ section {
 }
 
 
-
-section a {
-    color: rgb(255, 0, 150);
-    font-style: italic;
-
-}
-
-section h1 {
-    color: rgb(255, 0, 0);
-    text-align: center;
-}
-
-section h2 {
-    color: rgb(0, 0, 0);
-    text-align: center;
-}
-
-section h2 ~ h3 {
-    color: rgb(242, 127, 150);
-}
-
-section h3 {
-    color:rgb(0, 0, 0)
-}
 
 section p{
     text-align: center;
@@ -184,37 +146,50 @@ header img {
 }
 
 
-  footer {
-  display: flex;
-  margin: 0px;
-  justify-content: space-between;
-  background-color: rgb(240, 240, 255);
-  padding: 20px;
-  border-top: 2px solid rgb(0, 0, 100);
+/*----------------------------------------------------------------------------------------------------*/
+
+
+footer {
+  background-color: rgb(30, 30, 30);
+  border-top: 2px solid rgb(255, 255, 255);
+  color: rgb(220, 220, 220);
   font-family: sans-serif;
+  margin: 0px;
+  padding: 0px; 
 }
 
-footer > div {
-  flex: 1;
-  padding: 0 20px;
+#footer-1-section {
+  margin: 0px;
+  padding: 10px; 
+  text-align: center;
+}
+
+#footer-2-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px;
+  padding: 0px;
+}
+
+.footer-2-div {
+  background-color: rgb(60, 60, 60);
+  border: 2px solid;
+  border-color: rgb(240, 240, 240);
+  border-radius: 10px;
   box-sizing: border-box;
-}
-
-footer h3 {
-  margin-top: 0;
-  color: rgb(0, 0, 100);
-}
-
-footer ul {
   list-style: none;
-  padding: 0;
+  flex: 1;
+  margin-inline: 10px;
+  padding: 10px 20px;; 
 }
 
-footer a {
-  color: rgb(0, 0, 100);
-  text-decoration: none;
+.footer-2-div h3 {
+    text-align: center;
 }
 
-footer a:hover {
-  text-decoration: underline;
+#footer-3-section {
+  font-size: 0.8em;
+  margin: 0px;
+  padding: 10px; 
+  text-align: center;
 }
