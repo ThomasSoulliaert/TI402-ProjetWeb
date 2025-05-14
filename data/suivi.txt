@@ -1,0 +1,11 @@
+# Étape 1 (Séance 1 de suivi) : Choix du site et conception
+    1. Choisissez un sujet pour votre projet (site web de commerce électronique, biographie, éducation, jeux, littérature, etc..).
+    2. Avant d’entamer la partie programmation, il est nécessaire de préparer la charte graphique de votre site Web et de concevoir le plan du site (wireframe).
+    Remarque : L’arborescence du site ne doit pas dépasser 2 niveaux.
+
+
+    ODD14 - Conserver et exploiter de manière durable les océans, les mers et les ressources marines aux fins du développement durable
+
+Publié le 7 février 2024
+
+Le quatorzième objectif promeut la conservation et l’exploitation durable des écosystèmes marins et côtiers, selon trois ambitions fondatrices : une gestion plus durable des ressources via la préservation de 10 % des zones marines et côtières, la lutte contre la surpêche et la pêche illicite ; l’accélération des recherches scientifiques et du transfert de techniques pour renforcer la résilience des écosystèmes et réduire au maximum l’acidification des océans ; la conception de la gestion durable des ressources marines comme une opportunité de développement économique et touristique pour les petits États insulaires et les pays les moins avancées.
