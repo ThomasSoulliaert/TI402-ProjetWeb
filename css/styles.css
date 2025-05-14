@@ -1,49 +1,63 @@
-/* Style de base du body */
+/* Réinitialisation */
 body {
   margin: 0;
   font-family: sans-serif;
 }
 
-/* Barre de navigation fixe */
-nav {
+/* HEADER fixé */
+#main-header {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  background-color: white;
+  width: 100%;
+  z-index: 1000;
+  transition: height 0.3s ease;
+}
+
+/* NAVIGATION */
+nav {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  transition: padding 0.3s ease, background-color 0.3s ease;
-}
-
-/* Réduction au scroll */
-nav.shrink {
-  padding: 10px;
-  background-color: #f0f0f0;
+  height: 100px; /* Hauteur initiale */
+  background-color: rgb(0, 0, 100);
+  transition: height 0.3s ease, background-color 0.3s ease;
 }
 
 /* Liens */
 nav a {
   text-decoration: none;
-  color: rgb(0, 0, 100);
+  color: white;
   font-weight: bold;
   padding: 10px 20px;
+  font-size: 1.2em;
   border-radius: 10px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 nav a:hover {
-  background-color: rgb(0, 0, 100);
-  color: white;
+  background-color: white;
+  color: rgb(0, 0, 100);
 }
 
-/* Espace au-dessus du contenu pour ne pas le cacher sous le nav */
-main {
-  margin-top: 80px;
+/* Au scroll */
+#main-header.shrink nav {
+  height: 60px;
+  background-color: white;
+}
+
+#main-header.shrink nav a {
+  color: rgb(0, 0, 100);
+}
+
+
+test{
+    background-image: url("../img/sea.jpg"); /* lien vers l’image */
+  background-size: cover; /* adapte la taille */
+  background-position: center; /* centre l’image */
+    
+    
+    background-image: none;   /* supprime l’image pour plus de lisibilité */
+
+
 }

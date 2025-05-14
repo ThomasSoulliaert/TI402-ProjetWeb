@@ -1,8 +1,8 @@
 window.addEventListener("scroll", function () {
-  const nav = document.querySelector("nav");
-  if (window.scrollY > 50) {
-    nav.classList.add("shrink");
+  const header = document.getElementById("main-header");
+  if (window.scrollY > 0) {
+    header.classList.add("shrink");
   } else {
-    nav.classList.remove("shrink");
+    header.classList.remove("shrink");
   }
 });
