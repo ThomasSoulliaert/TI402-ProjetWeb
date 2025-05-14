@@ -2,14 +2,17 @@ html {
     background-color: rgb(255, 255, 255);
 }
 
-/* Réinitialisation */
 body {
-  background-color: rgb(0, 128, 255);
-  margin: 0;
+  background-color: rgb(255, 255, 255);
   font-family: sans-serif;
+  margin: 0px;
+  padding: 0px;
 }
 
-/* HEADER fixé */
+
+/*----------------------------------------------------------------------------------------------------*/
+
+
 header {
   position: fixed;
   top: 0;
@@ -19,33 +22,28 @@ header {
   transition: height 0.3s ease;
 }
 
-/* NAVIGATION */
 .header-nav {
   display: flex;
+  text-align: center;    
   justify-content: space-evenly;
   align-items: center;
   height: 100px; /* Hauteur initiale */
-  background-image: url("../img/sea.jpg"); /* Remplace par le bon chemin */
+  background-image: url("../img/sea.jpg");
   background-size: cover;
   background-position: center;
-  
   transition: height 0.3s ease, background-color 0.3s ease, background-image 0.3s ease;
   position: relative;
-
 }
 
-/* Liens */
 .header-nav a {
+  flex: 1; 
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-weight: bold;
   padding: 10px 20px;
   font-size: 1.2em;
   border-radius: 10px;
-  transition: background-color 0.3s, color 0.3s;
-
-
-  
+  transition: background-color 0.3s, color 0.3s;  
 }
 
 .header-nav a:hover {
@@ -53,7 +51,6 @@ header {
   color: rgb(0, 0, 100);
 }
 
-/* Au scroll */
 header.shrink .header-nav {
   height: 60px;
   background-color: rgb(255, 255, 255);
@@ -63,9 +60,8 @@ header.shrink .header-nav {
 
 header.shrink .header-nav a {
   color: rgb(0, 0, 100);
-  font-size: 1.0em; /* ↓ Taille réduite */
+  font-size: 1.0em;
 }
-
 
 .header-nav::before {
   content: "";
@@ -74,7 +70,7 @@ header.shrink .header-nav a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../img/sea.jpg"); /* Ton image */
+  background-image: url("../img/sea.jpg");
   background-size: cover;
   background-position: center;
   opacity: 1;
@@ -82,7 +78,6 @@ header.shrink .header-nav a {
   z-index: -1; /* Derrière les liens */
 }
 
-/* En mode réduit : fond transparent (image "disparue") */
 header.shrink .header-nav::before {
   opacity: 0;
 }
@@ -91,32 +86,65 @@ header.shrink .header-nav::before {
 /*----------------------------------------------------------------------------------------------------*/
 
 
-#section-main {
-    max-width: 1000px;
+main section {
+    max-width: 1200px;
     margin-top: 20px; /*Marge du haut*/
     margin-bottom: 20px; /*Marge du bas*/
     margin-inline: auto; /*Marge sur le côté, auto pour être au centre*/
-    background-color: rgb(100, 100, 255);
+    background-color: rgb(60, 120, 255);
     padding: 20px; /*Espace autour de des éléments dans section*/
     border-radius: 10px;
 }
 
+#accueil-1-section {
+  background-color: rgb(255, 255, 255);
+  margin-top: 120px;
+}
 
 
-section p{
+#accueil-2-section {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;      /* aligne verticalement */
+  gap: 50px;                /* espace entre l’image et le texte */
+  padding: 0px;
+}
+
+.section-image {
+  width: 250px;     /* largeur fixe */
+  height: auto;     /* conserve les proportions */
+  border-radius: 10px;
+}
+
+#accueil-2-section-div {
+  flex: 1;                  /* prend le reste de la place */
+}
+
+
+#accueil-3-section {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid;
+  border-color: rgb(0, 0, 100);
+  border-radius: 10px;
+
+
+}
+
+
+main section p{
     text-align: center;
 }
 
 
 
 
-a {
+main a {
     text-decoration-line: none;
     color: rgb(255, 255, 255);
     border-radius: 10px;
 }
 
-a:hover {
+main a:hover {
     background-color: rgb(0, 191, 255); 
 }
 
@@ -126,19 +154,11 @@ div {
     margin-top: 10px;
     margin-bottom: 10px; 
     margin-inline: auto;
-    background-color: rgb(180, 180, 255);
+    background-color: rgb(60, 100, 255);
     padding: 10px; 
     border-radius: 10px;
 }
 
-
-
-
-header img {
-    height: auto;
-    width: auto;
-    border-radius: 10px;
-}
 
 #definition, #citation {
     font-style: italic;
@@ -151,7 +171,7 @@ header img {
 
 footer {
   background-color: rgb(30, 30, 30);
-  border-top: 2px solid rgb(255, 255, 255);
+  border-top: 2px solid rgb(0, 0, 100);
   color: rgb(220, 220, 220);
   font-family: sans-serif;
   margin: 0px;
@@ -177,7 +197,6 @@ footer {
   border-color: rgb(240, 240, 240);
   border-radius: 10px;
   box-sizing: border-box;
-  list-style: none;
   flex: 1;
   margin-inline: 10px;
   padding: 10px 20px;; 
@@ -193,3 +212,53 @@ footer {
   padding: 10px; 
   text-align: center;
 }
+
+
+footer ul {
+  list-style: none;
+}
+
+footer a {
+  text-decoration-line: underline;
+  color: rgb(255, 255, 255);
+}
+
+footer a:hover {
+  color: rgb(255, 0, 0);
+}
+
+
+/*----------------------------------------------------------------------------------------------------*/
+
+
+main h1 {
+  color: rgb(255, 0, 0);
+  font-size: 2.0em;
+  font-weight: bold;
+  text-align: center;
+}
+
+main h2 {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline;
+}
+
+main h3 {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-align: left;
+}
+
+main p {
+  text-align: justify;
+}
+
+.right {
+  text-align: right;
+}
+
+
+/*----------------------------------------------------------------------------------------------------*/
+
