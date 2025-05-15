@@ -161,18 +161,19 @@ header.shrink .header-nav::before {
     border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 20px; 
+    margin-bottom: 0px; 
     margin-inline: auto; 
-    margin-top: 20px;
+    margin-top: 10px;
     max-width: 1380px;
-    padding: 10px;
+    padding: 0px;
+    padding-left: 10px;
 }
 
 #especes-2-section form {
     align-items: flex-start; /* aligner en haut */
     display: flex;
     flex-wrap: nowrap;
-    gap: 20px;
+    gap: 10px;
 }
 
 #especes-2-section form div {
@@ -185,8 +186,23 @@ header.shrink .header-nav::before {
     padding: 10px; 
 }
 
+#especes-2-section button {
+    align-self:last baseline;
+    background-color: rgb(200, 200, 200);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    margin-left: 570px; /* <-- clé pour l’alignement à droite */
+    margin-bottom: 10px;
+    padding: 5px 10px;  
+}
+
 #especes-3-section {
     background-color: rgb(255, 255, 255);
+    display: grid;
+    gap: 20px; /* espace entre les items */
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
     margin-bottom: 20px; 
     margin-inline: auto; 
     max-width: 1400px;
@@ -207,52 +223,6 @@ header.shrink .header-nav::before {
     border-radius: 10px;
     width: 100%;
 }
-    
-
-
-
-
-
-
-
-
-
-
-
-#filter-form button#reset-filters {
-  margin-left: auto;       /* pousse le bouton à droite */
-  padding: 6px 15px;
-  background-color: crimson;
-  color: rgb(158, 155, 155);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  height: fit-content;     /* pour que le bouton ait la hauteur juste */
-}
-
-
-
-
-
-.grille-animaux {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
-  gap: 20px; /* espace entre les items */
-}
-
-
-
-    button#reset-filtres {
-      padding: 5px 10px;
-      background-color: crimson;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-
-
     
 
 /*----------------------------------------------------------------------------------------------------*/
