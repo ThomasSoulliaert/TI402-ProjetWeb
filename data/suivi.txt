@@ -3,3 +3,22 @@
     => Lutter pour la préservation de la biodiversité marine
     2. Avant d’entamer la partie programmation, il est nécessaire de préparer la charte graphique de votre site Web et de concevoir le plan du site (wireframe).
     Remarque : L’arborescence du site ne doit pas dépasser 2 niveaux.
+
+# Étape 2 (Séance 2 de suivi) : Premiers pas
+    1. Créez (au minimum) 3 pages html que vous nommerez :
+        a. Accueil qui servira de page d’index
+        => Fait
+        b. Un nom de votre choix
+        => Fait
+        c. Contact/A propos de nous
+        => Fait
+    2. Mettez en place le header et le footer au niveau de toutes les pages
+    => Fait (A compléter)
+    3. Mettez les liens vers le(s) fichier(s) css et js
+    => Fait
+    4. (Optionnel) Ajoutez un logo à votre site Web.
+
+    5. Ajoutez du contenu à vos pages Web.
+    (A compléter)
+    6. Ajoutez aux pages un contenu visuel (images, logo ...)
+    (A compléter)
