@@ -12,20 +12,26 @@ window.addEventListener("scroll", function () {
 
 /* Espèces */
 document.getElementById('filter-form').addEventListener('change', function() {
-  const type = document.getElementById('type-espece').value;
-  const menace = document.getElementById('niveau-menace').value;
+  const famille = document.getElementById('famille_espece').value;
+  const menace = document.getElementById('niveau_menace').value;
+  const zone = document.getElementById('zone_geo').value;
+  const taille = document.getElementById('taille_espece').value;
 
   const animaux = document.querySelectorAll('.animal');
 
   animaux.forEach(animal => {
-    const typeAnimal = animal.getAttribute('data-type');
-    const menaceAnimal = animal.getAttribute('data-menace');
+    const familleAnimal = animal.getAttribute('dataFamille');
+    const menaceAnimal = animal.getAttribute('dataMenace');
+    const zoneAnimal = animal.getAttribute('dataZone');
+    const tailleAnimal = animal.getAttribute('dataTaille');
 
     // On montre seulement si correspond aux 2 filtres (ou filtres vides)
-    const matchType = !type || type === typeAnimal;
+    const matchFamille = !famille || famille === familleAnimal;
     const matchMenace = !menace || menace === menaceAnimal;
+    const matchZone = !zone || zone === zoneAnimal;
+    const matchTaille = !taille || taille === tailleAnimal;
 
-    if (matchType && matchMenace) {
+    if (matchFamille && matchMenace && matchZone && matchTaille) {
       animal.style.display = '';
     } else {
       animal.style.display = 'none';
@@ -35,8 +41,10 @@ document.getElementById('filter-form').addEventListener('change', function() {
 
 // Effacer les filtres : remise à zéro de tous les selects
 document.getElementById('reset-filters').addEventListener('click', function() {
-  document.getElementById('type-espece').value = '';
-  document.getElementById('niveau-menace').value = '';
+  document.getElementById('famille_espece').value = '';
+  document.getElementById('niveau_menace').value = '';
+  document.getElementById('zone_geo').value = '';
+  document.getElementById('taille_espece').value = '';
   // Trigger changement pour afficher tous
   document.getElementById('filter-form').dispatchEvent(new Event('change'));
 });

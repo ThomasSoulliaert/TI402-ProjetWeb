@@ -24,10 +24,10 @@
 
             <section id="especes-2-section" class="filtres">
                 <!-- Barre de filtre -->
-                <form id="filter-form">
-                    <div class="filter-group">
-                        <label for="type-espece">Type d'espèce :</label>
-                        <select id="type-espece" name="type-espece">
+                <form>
+                    <div>
+                        <label for="famille_espece">Famille d'espèce :</label>
+                        <select id="famille_espece" name="famille_espece">
                         <option value="">-- Tous les types --</option>
                         <option value="poisson">Poissons</option>
                         <option value="mammifere">Mammifères</option>
@@ -36,13 +36,33 @@
                         </select>
                     </div>
 
-                    <div class="filter-group">
-                        <label for="niveau-menace">Niveau de menace :</label>
-                        <select id="niveau-menace" name="niveau-menace">
+                    <div>
+                        <label for="niveau_menace">Niveau de menace :</label>
+                        <select id="niveau_menace" name="niveau_menace">
                         <option value="">-- Tous niveaux --</option>
-                        <option value="non-menacee">Non menacé</option>
-                        <option value="menacee">Menacé</option>
-                        <option value="tres-menacee">Très menacé</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="zone_geo">Zone Géographique :</label>
+                        <select id="zone_geo" name="zone_geo">
+                        <option value="">-- Toutes zones--</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="taille_espece">Taille :</label>
+                        <select id="taille_espece" name="taille_espece">
+                        <option value="">-- Toutes tailles--</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
                         </select>
                     </div>
 
@@ -52,27 +72,27 @@
 
             <!-- Grille d'animaux -->
             <section id="especes-3-section" class="grille-animaux">
-                <div class="animal" data-type="mammifere" data-menace="non-menacee">
+                <div dataFamille="mammifere" dataMenace="non-menacee">
                     <img src="../img/dolphin.jpg" alt="Dauphin">
                     <p>Dauphin</p>
                 </div>
                 
-                <div class="animal" data-type="poisson" data-menace="non-menacee">
+                <div dataFamille="poisson" dataMenace="non-menacee">
                     <img src="../img/bluefin_tuna.jpg" alt="Thon Rouge">
                     <p>Thon Rouge</p>
                 </div>
   
-                <div class="animal" data-type="invertebre" data-menace="non-menacee">
+                <div dataFamille="invertebre" dataMenace="non-menacee">
                     <img src="../img/crab.jpg" alt="Crabe">
                     <p>Crabe</p>
                 </div>
   
-                <div class="animal" data-type="mammifere" data-menace="non-menacee">
+                <div dataFamille="mammifere" dataMenace="non-menacee">
                     <img src="../img/orca.jpg" alt="Orque">
                     <p>Orque</p>
                 </div>
   
-                <div class="animal" data-type="poisson" data-menace="non-menacee">
+                <div dataFamille="poisson" dataMenace="non-menacee">
                     <img src="../img/manta_ray.jpg" alt="Raie Manta">
                     <p>Raie Manta</p>
                 </div>
