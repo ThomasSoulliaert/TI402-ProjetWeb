@@ -22,12 +22,15 @@ document.querySelector('#especes-2-section form').addEventListener('change', fun
     animaux.forEach(animal => {
         const familleAnimal = animal.getAttribute('dataFamille');
         const menaceAnimal = animal.getAttribute('dataMenace');
-        const zoneAnimal = animal.getAttribute('dataZone');
+        const zoneAnimal = animal.getAttribute('dataZone') || '';
+        const zoneList = zoneAnimal.split(',').map(z => z.trim());
+        
+        
         const tailleAnimal = animal.getAttribute('dataTaille');
 
         const matchFamille = !famille || famille === familleAnimal;
         const matchMenace = !menace || menace === menaceAnimal;
-        const matchZone = !zone || zone === zoneAnimal;
+        const matchZone = !zone || zoneList.includes(zone);
         const matchTaille = !taille || taille === tailleAnimal;
 
         if (matchFamille && matchMenace && matchZone && matchTaille) {

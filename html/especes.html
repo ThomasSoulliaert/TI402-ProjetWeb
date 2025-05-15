@@ -29,10 +29,11 @@
                         <label for="famille_espece">Famille d'espèce :</label>
                         <select id="famille_espece" name="famille_espece">
                         <option value="">-- Tous les types --</option>
-                        <option value="poisson">Poissons</option>
-                        <option value="mammifere">Mammifères</option>
-                        <option value="reptile">Reptiles</option>
                         <option value="invertebre">Invertébrés</option>
+                        <option value="mammifere">Mammifères</option>
+                        <option value="oiseau">Oiseaux</option>
+                        <option value="poisson">Poissons</option>
+                        <option value="reptile">Reptiles</option>
                         </select>
                     </div>
 
@@ -40,9 +41,14 @@
                         <label for="niveau_menace">Niveau de menace :</label>
                         <select id="niveau_menace" name="niveau_menace">
                         <option value="">-- Tous niveaux --</option>
-                        <option value="A">A</option>
-                        <option value="B">B</option>
-                        <option value="C">C</option>
+                        <option value="preoccupation_mineure">Préoccupation mineure (LC)</option>
+                        <option value="quasi_menace">Quasi menacé (NT)</option>
+                        <option value="vulnerable">Vulnérable (VU)</option>
+                        <option value="danger">En danger (EN)</option>
+                        <option value="danger_critique">En danger critique (CR)</option>
+                        <option value="eteint_etat_sauvage">Éteint à l’état sauvage (EW)</option>
+                        <option value="eteint">Éteint (EX)</option>
+                        <option value="donnees_insuffisantes">Données insuffisantes</option>
                         </select>
                     </div>
 
@@ -50,9 +56,25 @@
                         <label for="zone_geo">Zone Géographique :</label>
                         <select id="zone_geo" name="zone_geo">
                         <option value="">-- Toutes zones--</option>
-                        <option value="A">A</option>
-                        <option value="B">B</option>
-                        <option value="C">C</option>
+                        <option value="abysses">Abysses</option>
+                        <option value="afrique_est">Afrique de l'Est</option>
+                        <option value="amerique">Amérique</option>
+                        <option value="antarctique">Antarctique</option>
+                        <option value="asie_sud_est">Asie du Sud-Est</option>
+                        <option value="australie">Australie</option>
+                        <option value="fleuve_yangtse">Fleuve Yangtsé (Chine)</option>
+                        <option value="hawaii">Hawaï</option>
+                        <option value="indonesie">Indonésie</option>
+                        <option value="mediterranee">Méditerranée</option>
+                        <option value="mer_bering">Mer de Béring</option>
+                        <option value="mer_rouge">Mer Rouge</option>
+                        <option value="nouvelle_zelande">Nouvelle-Zélande</option>
+                        <option value="ocean_arctique">Océan Arctique</option>
+                        <option value="ocean_atlantique">Océan Atlantique</option>
+                        <option value="ocean_atlantique_nord">Océan Atlantique Nord</option>
+                        <option value="ocean_indien">Océan Indien</option>
+                        <option value="ocean_pacifique">Océan Pacifique</option>
+                        <option value="tropiques">Tropiques</option>
                         </select>
                     </div>
 
@@ -60,9 +82,13 @@
                         <label for="taille_espece">Taille :</label>
                         <select id="taille_espece" name="taille_espece">
                         <option value="">-- Toutes tailles--</option>
-                        <option value="A">A</option>
-                        <option value="B">B</option>
-                        <option value="C">C</option>
+                        <option value="minuscule">Minuscule (-1cm)</option>
+                        <option value="tres_petit">Très petit (1 à 10cm)</option>
+                        <option value="petit">Petit (10cm à 1 mètre)</option>
+                        <option value="taille_humaine">Taille humaine (1 à 3 mètres)</option>
+                        <option value="grand">Grand (4 à 9 mètres)</option>
+                        <option value="tres_grand">Très grand (10 à 25 mètres)</option>
+                        <option value="immense">Immense (+25 mètres)</option>
                         </select>
                     </div>
                 </form>
@@ -72,33 +98,145 @@
 
             <!-- Grille d'animaux -->
             <section id="especes-3-section">
-                <div dataFamille="mammifere" dataMenace="non-menacee">
-                    <img src="../img/dolphin.jpg" alt="Dauphin">
-                    <p>Dauphin</p>
+                <div dataFamille="poisson" dataMenace="danger_critique" dataZone="europe,ocean_atlantique,mediterranee" dataTaille="taille_humaine">
+                    <img src="../img/sea.jpg" alt="Anguille d’Europe">
+                    <p>Anguille d’Europe</p>
                 </div>
-                
-                <div dataFamille="poisson" dataMenace="non-menacee">
-                    <img src="../img/bluefin_tuna.jpg" alt="Thon Rouge">
-                    <p>Thon Rouge</p>
+
+                <div dataFamille="mammifere" dataMenace="danger" dataZone="ocean_atlantique,ocean_pacifique" dataTaille="immense">
+                    <img src="../img/baleine_bleue.jpg" alt="Baleine Bleue">
+                    <p>Baleine Bleue</p>
                 </div>
-  
-                <div dataFamille="invertebre" dataMenace="non-menacee">
-                    <img src="../img/crab.jpg" alt="Crabe">
+
+                <div dataFamille="mammifere" dataMenace="quasi_menace" dataZone="ocean_arctique" dataTaille="taille_humaine">
+                    <img src="../img/sea.jpg" alt="Béluga">
+                    <p>Béluga</p>
+                </div>
+
+                <div dataFamille="invertebre" dataMenace="preoccupation_mineure" dataZone="tropiques,ocean_indien" dataTaille="petit">
+                    <img src="../img/crabe.jpg" alt="Crabe">
                     <p>Crabe</p>
                 </div>
-  
-                <div dataFamille="mammifere" dataMenace="non-menacee">
-                    <img src="../img/orca.jpg" alt="Orque">
+
+                <div dataFamille="poisson" dataMenace="danger_critique" dataZone="afrique_est,indonesie" dataTaille="grand">
+                    <img src="../img/sea.jpg" alt="Coelacanthe">
+                    <p>Coelacanthe</p>
+                </div>
+
+                <div dataFamille="mammifere" dataMenace="preoccupation_mineure" dataZone="ocean_atlantique,ocean_pacifique,mediterranee" dataTaille="taille_humaine">
+                    <img src="../img/dauphin.jpg" alt="Dauphin">
+                    <p>Dauphin</p>
+                </div>
+
+                <div dataFamille="mammifere" dataMenace="eteint" dataZone="fleuve_yangtse" dataTaille="taille_humaine">
+                    <img src="../img/sea.jpg" alt="Dauphin de Chine (baiji)">
+                    <p>Dauphin de Chine (baiji)</p>
+                </div>
+
+                <div dataFamille="oiseau" dataMenace="eteint" dataZone="ocean_indien" dataTaille="taille_humaine">
+                    <img src="../img/sea.jpg" alt="Dodo">
+                    <p>Dodo</p>
+                </div>
+
+                <div dataFamille="mammifere" dataMenace="vulnerable" dataZone="ocean_indien,ocean_pacifique" dataTaille="taille_humaine">
+                    <img src="../img/sea.jpg" alt="Dugong">
+                    <p>Dugong</p>
+                </div>
+
+                <div dataFamille="invertebre" dataMenace="donnees_insuffisantes" dataZone="abysses" dataTaille="petit">
+                    <img src="../img/sea.jpg" alt="Éponge de verre">
+                    <p>Éponge de verre</p>
+                </div>
+
+                <div dataFamille="poisson" dataMenace="preoccupation_mineure" dataZone="abysses" dataTaille="taille_humaine">
+                    <img src="../img/sea.jpg" alt="Grenadier géant">
+                    <p>Grenadier géant</p>
+                </div>
+
+                <div dataFamille="poisson" dataMenace="quasi_menace" dataZone="ocean_indien,ocean_pacifique" dataTaille="petit">
+                    <img src="../img/sea.jpg" alt="Hippocampe moucheté">
+                    <p>Hippocampe moucheté</p>
+                </div>
+
+                <div dataFamille="invertebre" dataMenace="quasi_menace" dataZone="australie,nouvelle_zelande" dataTaille="petit">
+                    <img src="../img/sea.jpg" alt="Langouste géante rouge">
+                    <p>Langouste géante rouge</p>
+                </div>
+
+                <div dataFamille="invertebre" dataMenace="quasi_menace" dataZone="asie_sud_est,amerique" dataTaille="petit">
+                    <img src="../img/sea.jpg" alt="Limule (crabe fer à cheval)">
+                    <p>Limule (crabe fer à cheval)</p>
+                </div>
+
+                <div dataFamille="oiseau" dataMenace="quasi_menace" dataZone="antarctique" dataTaille="taille_humaine">
+                    <img src="../img/sea.jpg" alt="Manchot empereur">
+                    <p>Manchot empereur</p>
+                </div>
+
+                <div dataFamille="poisson" dataMenace="quasi_menace" dataZone="ocean_indien,ocean_pacifique" dataTaille="taille_humaine">
+                    <img src="../img/sea.jpg" alt="Mérou géant">
+                    <p>Mérou géant</p>
+                </div>
+
+                <div dataFamille="invertebre" dataMenace="donnees_insuffisantes" dataZone="abysses" dataTaille="tres_petit">
+                    <img src="../img/sea.jpg" alt="Méduse immortelle">
+                    <p>Méduse immortelle</p>
+                </div>
+
+                <div dataFamille="mammifere" dataMenace="quasi_menace" dataZone="ocean_pacifique" dataTaille="taille_humaine">
+                    <img src="../img/sea.jpg" alt="Otarie à fourrure du Nord">
+                    <p>Otarie à fourrure du Nord</p>
+                </div>
+
+                <div dataFamille="mammifere" dataMenace="preoccupation_mineure" dataZone="abysses" dataTaille="grand">
+                    <img src="../img/orque.jpg" alt="Orque">
                     <p>Orque</p>
                 </div>
-  
-                <div dataFamille="poisson" dataMenace="non-menacee">
-                    <img src="../img/manta_ray.jpg" alt="Raie Manta">
-                    <p>Raie Manta</p>
-                </div>
-            
-              <!-- Ajoute plus d'animaux ici -->
 
+                <div dataFamille="mammifere" dataMenace="danger" dataZone="hawaii" dataTaille="taille_humaine">
+                    <img src="../img/sea.jpg" alt="Phoque moine d’Hawaï">
+                    <p>Phoque moine d’Hawaï</p>
+                </div>
+
+                <div dataFamille="poisson" dataMenace="danger" dataZone="mer_rouge,ocean_indien,ocean_pacifique" dataTaille="grand">
+                    <img src="../img/sea.jpg" alt="Poisson Napoléon">
+                    <p>Poisson Napoléon</p>
+                </div>
+
+                <div dataFamille="poisson" dataMenace="vulnerable" dataZone="tropiques" dataTaille="tres_grand">
+                    <img src="../img/raie_manta_geante.jpg" alt="Raie manta géante">
+                    <p>Raie manta géante</p>
+                </div>
+
+                <div dataFamille="poisson" dataMenace="danger" dataZone="tropiques" dataTaille="grand">
+                    <img src="../img/sea.jpg" alt="Requin marteau">
+                    <p>Requin marteau</p>
+                </div>
+
+                <div dataFamille="poisson" dataMenace="donnees_insuffisantes" dataZone="abysses" dataTaille="grand">
+                    <img src="../img/sea.jpg" alt="Requin-lutin">
+                    <p>Requin-lutin</p>
+                </div>
+
+                <div dataFamille="poisson" dataMenace="danger" dataZone="ocean_atlantique_nord" dataTaille="taille_humaine">
+                    <img src="../img/sea.jpg" alt="Saumon de l'Atlantique">
+                    <p>Saumon de l'Atlantique</p>
+                </div>
+
+                <div dataFamille="mammifere" dataMenace="eteint" dataZone="mer_bering" dataTaille="grand">
+                    <img src="../img/sea.jpg" alt="Steller's sea cow">
+                    <p>Steller's sea cow</p>
+                </div>
+
+                <div dataFamille="poisson" dataMenace="danger" dataZone="ocean_atlantique,ocean_pacifique" dataTaille="grand">
+                    <img src="../img/thon_rouge.jpg" alt="Thon Rouge">
+                    <p>Thon Rouge</p>
+                </div>
+
+                <div dataFamille="reptile" dataMenace="vulnerable" dataZone="tropiques,ocean_atlantique,ocean_pacifique" dataTaille="taille_humaine">
+                    <img src="../img/sea.jpg" alt="Tortue luth">
+                    <p>Tortue luth</p>
+                </div>
             </section>
         </main>
 
