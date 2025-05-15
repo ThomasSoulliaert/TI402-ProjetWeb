@@ -157,7 +157,7 @@ header.shrink .header-nav::before {
 #especes-2-section {
     align-items: center; 
     background-color: rgb(0, 50, 200);
-    border: 1px solid rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
