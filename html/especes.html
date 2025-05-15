@@ -18,49 +18,68 @@
         </header>
 
         <main>
-            <p style="margin-top: 120px"></p>
+            <section id="especes-1-section">
+                <h1>Liste des Animaux Marins</h1>
+            </section>
+
+            <section id="especes-2-section" class="filtres">
+                <!-- Barre de filtre -->
+                <form id="filter-form">
+                    <div class="filter-group">
+                        <label for="type-espece">Type d'espèce :</label>
+                        <select id="type-espece" name="type-espece">
+                        <option value="">-- Tous les types --</option>
+                        <option value="poisson">Poissons</option>
+                        <option value="mammifere">Mammifères</option>
+                        <option value="reptile">Reptiles</option>
+                        <option value="invertebre">Invertébrés</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="niveau-menace">Niveau de menace :</label>
+                        <select id="niveau-menace" name="niveau-menace">
+                        <option value="">-- Tous niveaux --</option>
+                        <option value="non-menacee">Non menacé</option>
+                        <option value="menacee">Menacé</option>
+                        <option value="tres-menacee">Très menacé</option>
+                        </select>
+                    </div>
+
+                    <button type="button" id="reset-filters">Effacer les filtres</button>
+                </form>
+            </section>
+
+            <!-- Grille d'animaux -->
+            <section id="especes-3-section" class="grille-animaux">
+                <div class="animal" data-type="mammifere" data-menace="non-menacee">
+                    <img src="../img/dolphin.jpg" alt="Dauphin">
+                    <p>Dauphin</p>
+                </div>
+                
+                <div class="animal" data-type="poisson" data-menace="non-menacee">
+                    <img src="../img/bluefin_tuna.jpg" alt="Thon Rouge">
+                    <p>Thon Rouge</p>
+                </div>
   
-  <h1>Liste des Animaux Marins</h1>
+                <div class="animal" data-type="invertebre" data-menace="non-menacee">
+                    <img src="../img/crab.jpg" alt="Crabe">
+                    <p>Crabe</p>
+                </div>
+  
+                <div class="animal" data-type="mammifere" data-menace="non-menacee">
+                    <img src="../img/orca.jpg" alt="Orque">
+                    <p>Orque</p>
+                </div>
+  
+                <div class="animal" data-type="poisson" data-menace="non-menacee">
+                    <img src="../img/manta_ray.jpg" alt="Raie Manta">
+                    <p>Raie Manta</p>
+                </div>
+            
+              <!-- Ajoute plus d'animaux ici -->
 
-  <!-- FILTRES -->
-  <div class="filtres">
-    <label><input type="checkbox" class="filtre" value="mammifere"> Mammifère</label>
-    <label><input type="checkbox" class="filtre" value="poisson"> Poisson</label>
-    <label><input type="checkbox" class="filtre" value="crustace"> Crustacé</label>
-    <label><input type="checkbox" class="filtre" value="protégé"> Protégé</label>
-    <label><input type="checkbox" class="filtre" value="menacé"> Menacé</label>
-    <button id="reset-filtres">Effacer les filtres</button>
-  </div>
-
-  <!-- GRILLE -->
-  <div class="grille-animaux">
-    <div class="animal" data-tags="mammifere protégé">
-      <img src="../img/dolphin.jpg" alt="Dauphin">
-      <p>Dauphin</p>
-    </div>
-    <div class="animal" data-tags="poisson menacé">
-      <img src="../img/bluefin_tuna.jpg" alt="Thon Rouge">
-      <p>Thon Rouge</p>
-    </div>
-    <div class="animal" data-tags="crustace">
-      <img src="../img/crab.jpg" alt="Crabe">
-      <p>Crabe</p>
-    </div>
-    <div class="animal" data-tags="mammifere">
-      <img src="../img/boss_whale.jpg" alt="Baleine à bosse">
-      <p>Baleine à bosse</p>
-    </div>
-    <div class="animal" data-tags="poisson">
-      <img src="../img/manta_ray.jpg" alt="Raie Manta">
-      <p>Raie Manta</p>
-    </div>
-    <div class="animal" data-tags="mammifere">
-      <img src="../img/orca.jpg" alt="Orque">
-      <p>Orque</p>
-    </div>
-    <!-- Ajoute d'autres animaux ici -->
-  </div>
-
+            </section>
         </main>
 
         <footer>

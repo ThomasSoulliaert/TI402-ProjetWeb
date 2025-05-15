@@ -11,26 +11,32 @@ window.addEventListener("scroll", function () {
 
 
 /* Espèces */
+document.getElementById('filter-form').addEventListener('change', function() {
+  const type = document.getElementById('type-espece').value;
+  const menace = document.getElementById('niveau-menace').value;
 
-const filtres = document.querySelectorAll('.filtre');
-const resetBtn = document.getElementById('reset-filtres');
-const animaux = document.querySelectorAll('.animal');
+  const animaux = document.querySelectorAll('.animal');
 
-function filtrerAnimaux() {
-    const filtresActifs = Array.from(filtres)
-      .filter(f => f.checked)
-      .map(f => f.value);
+  animaux.forEach(animal => {
+    const typeAnimal = animal.getAttribute('data-type');
+    const menaceAnimal = animal.getAttribute('data-menace');
 
-    animaux.forEach(animal => {
-      const tags = animal.dataset.tags.split(' ');
-      const visible = filtresActifs.every(f => tags.includes(f));
-      animal.style.display = visible || filtresActifs.length === 0 ? 'block' : 'none';
-    });
-  }
+    // On montre seulement si correspond aux 2 filtres (ou filtres vides)
+    const matchType = !type || type === typeAnimal;
+    const matchMenace = !menace || menace === menaceAnimal;
 
-  filtres.forEach(f => f.addEventListener('change', filtrerAnimaux));
+    if (matchType && matchMenace) {
+      animal.style.display = '';
+    } else {
+      animal.style.display = 'none';
+    }
+  });
+});
 
-  resetBtn.addEventListener('click', () => {
-    filtres.forEach(f => f.checked = false);
-    filtrerAnimaux();
+// Effacer les filtres : remise à zéro de tous les selects
+document.getElementById('reset-filters').addEventListener('click', function() {
+  document.getElementById('type-espece').value = '';
+  document.getElementById('niveau-menace').value = '';
+  // Trigger changement pour afficher tous
+  document.getElementById('filter-form').dispatchEvent(new Event('change'));
 });
