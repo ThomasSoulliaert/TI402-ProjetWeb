@@ -51,3 +51,4 @@ document.getElementById('reset-filters').addEventListener('click', function () {
     // Déclencher un changement
     document.querySelector('#especes-2-section form').dispatchEvent(new Event('change'));
 });
+

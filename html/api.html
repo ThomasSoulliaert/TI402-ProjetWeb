@@ -4,6 +4,28 @@
         <meta charset="UTF-8">
         <title>API</title>
         <link rel="stylesheet" href="../css/styles.css">
+
+        <title>Carte Interactive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Feuille de style Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    #map {
+      height: 500px;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    section.map-container {
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 900px;
+      background-color: #f9f9f9;
+    }
+    </style>
+
     </head>
 
     <body>
@@ -18,7 +40,26 @@
         </header>
 
         <main>
+  <h1>Carte Interactive OpenStreetMap</h1>
 
+    <section class="map-container">
+      <div id="map"></div>
+    </section>
+
+    <!-- Script Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+      const map = L.map('map').setView([48.8566, 2.3522], 13);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors',
+        maxZoom: 19
+      }).addTo(map);
+
+      const marker = L.marker([48.8566, 2.3522]).addTo(map)
+        .bindPopup('Paris, France')
+        .openPopup();
+    </script>
         </main>
 
         <footer>
