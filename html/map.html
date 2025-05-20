@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Carte des zones géographiques</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    #map {
+      height: 100vh;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h1>Zones de vie des espèces marines</h1>
+    <div id="map"></div>
+  </section>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+const map = L.map('map', {
+  center: [0, 0],
+  zoom: 2,
+  minZoom: 2,
+  maxZoom: 5,
+  worldCopyJump: true,
+  maxBounds: [[-85, -180], [85, 180]],
+  maxBoundsViscosity: 1.0
+});
+
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors',
+      maxZoom: 18
+    }).addTo(map);
+
+    // Coordonnées approximatives des zones (tu peux les ajuster)
+    const zones = [
+      { nom: "Abysses", coords: [0, -30] },
+      { nom: "Afrique de l'Est", coords: [-5, 40] },
+      { nom: "Amérique", coords: [10, -70] },
+      { nom: "Antarctique", coords: [-75, 0] },
+      { nom: "Asie du Sud-Est", coords: [5, 105] },
+      { nom: "Australie", coords: [-25, 133] },
+      { nom: "Côtes Est Amérique du Nord", coords: [40, -73] },
+      { nom: "Fleuve Yangtsé (Chine)", coords: [31, 112] },
+      { nom: "Golfe de Californie", coords: [26, -110] },
+      { nom: "Hawaï", coords: [20, -157] },
+      { nom: "Indonésie", coords: [-2, 118] },
+      { nom: "Méditerranée", coords: [38, 16] },
+      { nom: "Mer de Béring", coords: [60, -175] },
+      { nom: "Mer Rouge", coords: [20, 38] },
+      { nom: "Nouvelle-Zélande", coords: [-41, 174] },
+      { nom: "Océan Arctique", coords: [85, 0] },
+      { nom: "Océan Atlantique", coords: [0, -30] },
+      { nom: "Océan Atlantique Nord", coords: [40, -40] },
+      { nom: "Océan Indien", coords: [-10, 80] },
+      { nom: "Océan Pacifique", coords: [0, -150] },
+      { nom: "Tropiques", coords: [0, 0] }
+    ];
+
+    zones.forEach(zone => {
+      L.marker(zone.coords)
+        .addTo(map)
+        .bindPopup(zone.nom);
+    });
+  </script>
+</body>
+</html>
