@@ -3,10 +3,10 @@ html {
 }
 
 body {
-  background-color: rgb(255, 255, 255);
-  font-family: sans-serif;
-  margin: 0px;
-  padding: 0px;
+    background-color: rgb(255, 255, 255);
+    font-family: sans-serif;
+    margin: 0px;
+    padding: 0px;
 }
 
 
@@ -14,72 +14,72 @@ body {
 
 
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  transition: height 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: height 0.3s ease;
 }
 
 .header-nav {
-  display: flex;
-  text-align: center;    
-  justify-content: space-evenly;
-  align-items: center;
-  height: 100px; /* Hauteur initiale */
-  background-image: url("../img/sea.jpg");
-  background-size: cover;
-  background-position: center;
-  transition: height 0.3s ease, background-color 0.3s ease, background-image 0.3s ease;
-  position: relative;
+    display: flex;
+    text-align: center;    
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px; /* Hauteur initiale */
+    background-image: url("../img/sea.jpg");
+    background-size: cover;
+    background-position: center;
+    transition: height 0.3s ease, background-color 0.3s ease, background-image 0.3s ease;
+    position: relative;
 }
 
 .header-nav a {
-  flex: 1; 
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-  padding: 10px 20px;
-  font-size: 1.2em;
-  border-radius: 10px;
-  transition: background-color 0.3s, color 0.3s;  
+    flex: 1; 
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;  
 }
 
 .header-nav a:hover {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 100);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 100);
 }
 
 header.shrink .header-nav {
-  height: 60px;
-  background-color: rgb(255, 255, 255);
-  background-image: none;
-  border-bottom: 2px solid rgb(0, 0, 100);
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    background-image: none;
+    border-bottom: 2px solid rgb(0, 0, 100);
 }
 
 header.shrink .header-nav a {
-  color: rgb(0, 0, 100);
-  font-size: 1.0em;
+    color: rgb(0, 0, 100);
+    font-size: 1.0em;
 }
 
 .header-nav::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("../img/sea.jpg");
-  background-size: cover;
-  background-position: center;
-  opacity: 1;
-  transition: opacity 2s ease;
-  z-index: -1; /* Derrière les liens */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/sea.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    transition: opacity 2s ease;
+    z-index: -1; /* Derrière les liens */
 }
 
 header.shrink .header-nav::before {
-  opacity: 0;
+    opacity: 0;
 }
 
 
@@ -93,9 +93,9 @@ header.shrink .header-nav::before {
 
 
 #accueil-1-section {
-  max-width: 1200px;
-  background-color: rgb(255, 255, 255);
-  margin-top: 120px;
+    max-width: 1200px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 120px;
     margin-bottom: 20px; /*Marge du bas*/
     margin-inline: auto; /*Marge sur le côté, auto pour être au centre*/
     background-color: rgb(60, 120, 255);
@@ -104,13 +104,13 @@ header.shrink .header-nav::before {
 }
 
 #accueil-2-section {
-  max-width: 1200px;
-  background-color: rgb(255, 255, 255);
-  display: flex;
-  align-items: center;      /* aligne verticalement */
-  gap: 50px;                /* espace entre l’image et le texte */
-  padding: 0px;
-  margin-top: 20px; /*Marge du haut*/
+    max-width: 1200px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;      /* aligne verticalement */
+    gap: 50px;                /* espace entre l’image et le texte */
+    padding: 0px;
+    margin-top: 20px; /*Marge du haut*/
     margin-bottom: 20px; /*Marge du bas*/
     margin-inline: auto; /*Marge sur le côté, auto pour être au centre*/
     background-color: rgb(60, 120, 255);
@@ -119,27 +119,43 @@ header.shrink .header-nav::before {
 }
 
 .section-image {
-  width: 250px;     /* largeur fixe */
-  height: auto;     /* conserve les proportions */
-  border-radius: 10px;
+    width: 250px;     /* largeur fixe */
+    height: auto;     /* conserve les proportions */
+    border-radius: 10px;
 }
 
 #accueil-2-section-div {
-  flex: 1;                  /* prend le reste de la place */
+    flex: 1;                  /* prend le reste de la place */
 }
 
 #accueil-3-section {
-  max-width: 1200px;
-  background-color: rgb(255, 255, 255);
-  border: 2px solid;
-  border-color: rgb(0, 0, 100);
-  border-radius: 10px;
-  margin-top: 20px; /*Marge du haut*/
+    max-width: 1200px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid;
+    border-color: rgb(0, 0, 100);
+    border-radius: 10px;
+    margin-top: 20px; /*Marge du haut*/
     margin-bottom: 20px; /*Marge du bas*/
     margin-inline: auto; /*Marge sur le côté, auto pour être au centre*/
     padding: 20px; /*Espace autour de des éléments dans section*/
     border-radius: 10px;
 }
+
+/*----------------------------------------------------------------------------------------------------*/
+/* carte.html */
+
+#carte-1-section {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 0, 0); 
+    margin-bottom: 20px; 
+    margin-inline: auto; 
+    margin-top: 120px;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+
+
 
 
 /*----------------------------------------------------------------------------------------------------*/
@@ -263,36 +279,36 @@ div {
 
 
 footer {
-  background-color: rgb(30, 30, 30);
-  border-top: 2px solid rgb(0, 0, 100);
-  color: rgb(220, 220, 220);
-  font-family: sans-serif;
-  margin: 0px;
-  padding: 0px; 
+    background-color: rgb(30, 30, 30);
+    border-top: 2px solid rgb(0, 0, 100);
+    color: rgb(220, 220, 220);
+    font-family: sans-serif;
+    margin: 0px;
+    padding: 0px; 
 }
 
 #footer-1-section {
-  margin: 0px;
-  padding: 10px; 
-  text-align: center;
+    margin: 0px;
+    padding: 10px; 
+    text-align: center;
 }
 
 #footer-2-section {
-  display: flex;
-  justify-content: space-between;
-  margin: 0px;
-  padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
 }
 
 .footer-2-div {
-  background-color: rgb(60, 60, 60);
-  border: 2px solid;
-  border-color: rgb(240, 240, 240);
-  border-radius: 10px;
-  box-sizing: border-box;
-  flex: 1;
-  margin-inline: 10px;
-  padding: 10px 20px;; 
+    background-color: rgb(60, 60, 60);
+    border: 2px solid;
+    border-color: rgb(240, 240, 240);
+    border-radius: 10px;
+    box-sizing: border-box;
+    flex: 1;
+    margin-inline: 10px;
+    padding: 10px 20px;; 
 }
 
 .footer-2-div h3 {
@@ -300,24 +316,24 @@ footer {
 }
 
 #footer-3-section {
-  font-size: 0.8em;
-  margin: 0px;
-  padding: 10px; 
-  text-align: center;
+    font-size: 0.8em;
+    margin: 0px;
+    padding: 10px; 
+    text-align: center;
 }
 
 
 footer ul {
-  list-style: none;
+    list-style: none;
 }
 
 footer a {
-  text-decoration-line: underline;
-  color: rgb(255, 255, 255);
+    text-decoration-line: underline;
+    color: rgb(255, 255, 255);
 }
 
 footer a:hover {
-  color: rgb(255, 0, 0);
+    color: rgb(255, 0, 0);
 }
 
 
