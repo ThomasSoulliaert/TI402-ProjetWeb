@@ -241,6 +241,59 @@ header.shrink .header-nav::before {
     width: 100%;
 }
     
+/* QUIZ */
+fieldset {
+    border: 1px solid #0077b6;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+
+.quiz-informations{
+
+    padding: 10px;
+    border: 2px solid #0077b6; 
+    border-radius: 8px;
+}
+
+
+
+
+#quiz-form{
+
+    width: 100%;
+    margin: 50px auto;
+    background-color: #f0f8ff; 
+    padding: 10px;
+    border: 2px solid #0077b6; 
+    border-radius: 8px;
+    }
+
+#quiz-form h1,#quiz-form h2{
+    text-align: center;
+    color: #0077b6; 
+}
+
+
+.questions-quiz ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+
+.quiz-informations {
+    width: 0%;
+    border: 1px solid #0077b6; 
+    border-radius: 8px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+
+
+
+
 
 /*----------------------------------------------------------------------------------------------------*/
 

@@ -17,9 +17,243 @@
             </nav>
         </header>
 
-        <main>
+            <main>
+        <section id="especes-1-section">
+            <h1>Quiz sur les espèces de la biodiversité marine</h1>
+        </section>
 
-        </main>
+         <fieldset class="quiz-informations"> 
+            <legend>Vos informations</legend>
+            <div>
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+            <div>
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required>
+            </div>
+            <div>
+                <label for="date_naissance">Date de naissance :</label>
+                <input type="date" id="date_naissance" name="date_naissance" required>
+            </div>
+            <div>
+                <label for="mail">Adresse mail :</label>
+                <input type="email" id="mail" name="mail" required>
+            </div>
+         </fieldset>
+
+
+       <form id="quiz-form">
+        <fieldset>
+            <legend>Quiz sur les animaux marins</legend>
+            <section>
+                <h2>Partie 1 : Classification des espèces</h2>
+                    <ol>
+                        <li class="questions-quiz">
+                         Quelle est la catégorie la plus alarmante de la liste rouge ?
+                            <ul>
+                                <li><input type="radio" name="q1" value="a"><label>Vulnérable (VU)</label></li>
+                                <li><input type="radio" name="q1" value="b"><label>En danger (EN)</label></li>
+                                <li><input type="radio" name="q1" value="c"><label>En danger critique (CR)</label></li>
+                                <li><input type="radio" name="q1" value="d"><label>Quasi menacé (NT)</label></li>
+                            </ul>
+                        </li>
+                        <br><li class="questions-quiz">
+                          Une espèce classée "Préoccupation mineure" est en danger :
+                            <ul>
+                                <li><input type="radio" name="q2" value="a"><label>Vrai</label></li>
+                                <li><input type="radio" name="q2" value="b"><label>Faux</label></li>
+                            </ul>
+                        </li>
+                        <br><li class="questions-quiz">
+                              Le statut "EW" signifie :
+                            <ul>
+                                <li><input type="radio" name="q3" value="a"><label>En voie d'extinction</label></li>
+                                <li><input type="radio" name="q3" value="b"><label>Éteint dans la nature</label></li>
+                                <li><input type="radio" name="q3" value="c"><label>Extrêmement vulnérable</label></li>
+                                <li><input type="radio" name="q3" value="d"><label>Écosystème en veille</label></li>
+                            </ul>
+                        </li>
+                        <br><li class="questions-quiz">
+                             Lequel de ces animaux est classé "CR" ?
+                            <ul>
+                                <li><input type="radio" name="q4" value="a"><label>Thon rouge</label></li>
+                                <li><input type="radio" name="q4" value="b"><label>Raie manta géante</label></li>
+                                <li><input type="radio" name="q4" value="c"><label>Vaquita (marsouin du Golfe)</label></li>
+                                <li><input type="radio" name="q4" value="d"><label>Mérou brun</label></li>
+                            </ul>
+                        </li>
+                        <br><li class="questions-quiz">
+                              Quel est l’organisme chargé de la liste rouge ?
+                            <ul>
+                                <li><input type="radio" name="q5" value="a"><label>WWF</label></li>
+                                <li><input type="radio" name="q5" value="b"><label>ONU</label></li>
+                                <li><input type="radio" name="q5" value="c"><label>UICN</label></li>
+                                <li><input type="radio" name="q5" value="d"><label>UNESCO</label></li>
+                            </ul>
+                        </li>
+                    </ol>
+                </section>
+            
+                <section>
+                    <h2>Partie 2 : Habitats et écosystèmes marins</h2>
+                    <ol start="6">
+                        <li class="questions-quiz">
+                             Lequel est un habitat de mangrove ?
+                            <ul>
+                                <li><input type="radio" name="q6" value="a"><label>Océan Arctique</label></li>
+                                <li><input type="radio" name="q6" value="b"><label>Côtes tropicales</label></li>
+                                <li><input type="radio" name="q6" value="c"><label>Zones abyssales</label></li>
+                                <li><input type="radio" name="q6" value="d"><label>Plateau continental</label></li>
+                            </ul>
+                        </li>
+                        <br><li class="questions-quiz">
+                               Le corail est un :
+                            <ul>
+                                <li><input type="radio" name="q7" value="a"><label>Végétal</label></li>
+                                <li><input type="radio" name="q7" value="b"><label>Roche</label></li>
+                                <li><input type="radio" name="q7" value="c"><label>Animal</label></li>
+                                <li><input type="radio" name="q7" value="d"><label>Bactérie</label></li>
+                            </ul>
+                        </li>
+                        <br><li class="questions-quiz">
+                             Lequel vit dans les abysses ?
+                            <ul>
+                                <li><input type="radio" name="q8" value="a"><label>Thon</label></li>
+                                <li><input type="radio" name="q8" value="b"><label>Poisson-lanterne</label></li>
+                                <li><input type="radio" name="q8" value="c"><label>Murène</label></li>
+                                <li><input type="radio" name="q8" value="d"><label>Dauphin</label></li>
+                            </ul>
+                        </li>
+                        <br><li class="questions-quiz">
+                              Quel écosystème absorbe le plus de CO₂ ?
+                            <ul>
+                                <li><input type="radio" name="q9" value="a"><label>Forêt amazonienne</label></li>
+                                <li><input type="radio" name="q9" value="b"><label>Prairies marines (herbiers)</label></li>
+                                <li><input type="radio" name="q9" value="c"><label>Zone polaire</label></li>
+                                <li><input type="radio" name="q9" value="d"><label>Récifs coralliens</label></li>
+                            </ul>
+                        </li>
+                        <br><li class="questions-quiz">
+                              Lequel de ces animaux n'est pas marin ?
+                            <ul>
+                                <li><input type="radio" name="q10" value="a"><label>Otarie</label></li>
+                                <li><input type="radio" name="q10" value="b"><label>Poisson-archer</label></li>
+                                <li><input type="radio" name="q10" value="c"><label>Manchot empereur</label></li>
+                                <li><input type="radio" name="q10" value="d"><label>Loutre de rivière</label></li>
+                            </ul>
+                        </li>
+                    </ol>
+                </section>
+            
+                <section>
+                    <h2>Partie 3 : Comportements et adaptations animales</h2>
+                    <ol start="11">
+                        <li class="questions-quiz">
+                               Pourquoi certains poissons brillent dans le noir ?
+                            <ul>
+                                <li><input type="radio" name="q11" value="a"><label>Pour dormir</label></li>
+                                <li><input type="radio" name="q11" value="b"><label>Pour se repérer</label></li>
+                                <li><input type="radio" name="q11" value="c"><label>Pour attirer des proies</label></li>
+                                <li><input type="radio" name="q11" value="d"><label>Par hasard</label></li>
+                            </ul>
+                        </li>
+                        <br><li class="questions-quiz">
+                              Quelle stratégie adopte le poulpe pour se protéger ?
+                            <ul>
+                                <li><input type="radio" name="q12" value="a"><label>Il saute</label></li>
+                                <li><input type="radio" name="q12" value="b"><label>Il crache de l’encre</label></li>
+                                <li><input type="radio" name="q12" value="c"><label>Il chante</label></li>
+                                <li><input type="radio" name="q12" value="d"><label>Il se gonfle</label></li>
+                            </ul>
+                        </li>
+                        <br><li class="questions-quiz">
+                              Le requin détecte ses proies grâce à :
+                            <ul>
+                                <li><input type="radio" name="q13" value="a"><label>Son odorat</label></li>
+                                <li><input type="radio" name="q13" value="b"><label>La lumière</label></li>
+                                <li><input type="radio" name="q13" value="c"><label>Les champs électriques</label></li>
+                                <li><input type="radio" name="q13" value="d"><label>Les vibrations de l’eau</label></li>
+                            </ul>
+                        </li>
+                        <br><li class="questions-quiz">
+                               Le camouflage permet :
+                            <ul>
+                                <li><input type="radio" name="q14" value="a"><label>De réguler la température</label></li>
+                                <li><input type="radio" name="q14" value="b"><label>D'échapper aux prédateurs</label></li>
+                                <li><input type="radio" name="q14" value="c"><label>De mieux nager</label></li>
+                                <li><input type="radio" name="q14" value="d"><label>D’attraper des parasites</label></li>
+                            </ul>
+                        </li>
+                        <br><li class="questions-quiz">
+                             Quelle technique utilise l’orque pour chasser ?
+                            <ul>
+                                <li><input type="radio" name="q15" value="a"><label>Chasse en solo</label></li>
+                                <li><input type="radio" name="q15" value="b"><label>Électrocution</label></li>
+                                <li><input type="radio" name="q15" value="c"><label>Chasse en groupe coordonné</label></li>
+                                <li><input type="radio" name="q15" value="d"><label>Filtre l’eau comme les baleines</label></li>
+                            </ul>
+                        </li>
+                    </ol>
+                </section>
+            
+                <section>
+                    <h2>Partie 4 : Menaces environnementales et pollution</h2>
+                    <ol start="16">
+                        <li class="questions-quiz">
+                              Quel est l’impact du plastique sur les tortues ?
+                            <ul>
+                                <li><input type="radio" name="q16" value="a"><label>Elles le mangent</label></li>
+                                <li><input type="radio" name="q16" value="b"><label>Il leur donne de l’énergie</label></li>
+                                <li><input type="radio" name="q16" value="c"><label>Il les protège</label></li>
+                                <li><input type="radio" name="q16" value="d"><label>Il les hydrate</label></li>
+                            </ul>
+                        </li>
+                        <br><li class="questions-quiz">
+                              La surpêche entraîne :
+                            <ul>
+                                <li><input type="radio" name="q17" value="a"><label>Une abondance d'espèces</label></li>
+                                <li><input type="radio" name="q17" value="b"><label>Un déséquilibre écologique</label></li>
+                                <li><input type="radio" name="q17" value="c"><label>La formation de coraux</label></li>
+                                <li><input type="radio" name="q17" value="d"><label>La disparition du sel</label></li>
+                            </ul>
+                        </li>
+                        <br><li class="questions-quiz">
+                               Quelle activité est responsable du réchauffement des océans ?
+                            <ul>
+                                <li><input type="radio" name="q18" value="a"><label>Déforestation</label></li>
+                                <li><input type="radio" name="q18" value="b"><label>Émissions de CO₂</label></li>
+                                <li><input type="radio" name="q18" value="c"><label>Pêche locale</label></li>
+                                <li><input type="radio" name="q18" value="d"><label>Navigation de plaisance</label></li>
+                            </ul>
+                        </li>
+                        <br><li class="questions-quiz">
+                            Le bruit des navires affecte :
+                            <ul>
+                                <li><input type="radio" name="q19" value="a"><label>La température de l’eau</label></li>
+                                <li><input type="radio" name="q19" value="b"><label>La communication des cétacés</label></li>
+                                <li><input type="radio" name="q19" value="c"><label>La couleur des poissons</label></li>
+                                <li><input type="radio" name="q19" value="d"><label>Les coraux</label></li>
+                            </ul>
+                        </li>
+                        <br><li class="questions-quiz">
+                            Quelle solution aide à restaurer les coraux ?
+                            <ul>
+                                <li><input type="radio" name="q20" value="a"><label>Reboisement</label></li>
+                                <li><input type="radio" name="q20" value="b"><label>Élevage de poissons</label></li>
+                                <li><input type="radio" name="q20" value="c"><label>Jardinage de coraux</label></li>
+                                <li><input type="radio" name="q20" value="d"><label>Peinture sous-marine</label></li>
+                            </ul>
+                        </li>
+                    </ol>
+                </section>
+            </fieldset>
+            
+
+            </form>
+            
+        </fieldset>
+    </main>
 
         <footer>
 
