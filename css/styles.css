@@ -280,6 +280,7 @@ footer a:hover {
     text-decoration: none;
 }
 
+
 /*----------------------------------------------------------------------------------------------------*/
 /* Espèces */
 /*----------------------------------------------------------------------------------------------------*/
@@ -348,6 +349,8 @@ footer a:hover {
     margin-inline: auto; 
     max-width: 1400px;
     padding: 20px; 
+
+    align-items: start; /* Important : permet à chaque carte d’avoir une hauteur indépendante */
 }
 
 #especes-3-section div {
@@ -358,6 +361,8 @@ footer a:hover {
     font-weight: bold;
     margin-inline: auto;
     padding: 10px; 
+
+    transition: all 0.3s ease;
 }
 
 #especes-3-section div img {
@@ -365,7 +370,46 @@ footer a:hover {
     border-radius: 10px;
     width: 100%;
 }
-    
+
+#especes-3-section img {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+#especes-3-section div:hover {
+    color: rgb(255, 100, 0);
+}
+
+#especes-3-section img:hover {
+    transform: scale(1.05);
+}
+
+/* Style du post-it (tooltip) */
+.tooltip {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.4s ease, max-height 0.4s ease;
+    background-color: #fff8c6;
+    color: rgb(0, 0, 0);
+    padding: 0 10px;
+    border-radius: 8px;
+    margin-top: 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+#especes-3-section div:hover .tooltip {
+    opacity: 1;
+    max-height: 500px; /* assez grand pour contenir le texte */
+    padding: 0 10px;
+}
+
 
 /*----------------------------------------------------------------------------------------------------*/
 /* Carte */
