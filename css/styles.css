@@ -1,5 +1,10 @@
+/*----------------------------------------------------------------------------------------------------*/
+/* Mise en page */
+/*----------------------------------------------------------------------------------------------------*/
+
+
 html {
-    background-color: rgb(30, 30, 30);
+    background-color: rgb(255, 255, 255);
 }
 
 body {
@@ -8,8 +13,72 @@ body {
     margin: 0px;
     padding: 0px;
 }
+main section p{
+    text-align: center;
+}
+
+main a {
+    text-decoration-line: none;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+main a:hover {
+    background-color: rgb(0, 191, 255); 
+    color: rgb(0, 0, 100);
+}
+
+#div {
+    margin-top: 10px;
+    margin-bottom: 10px; 
+    margin-inline: auto;
+    background-color: rgb(60, 100, 255);
+    background-color: rgb(150, 220, 255);
+    padding: 10px; 
+    border: 2px solid rgb(0, 0, 100);
+    border-radius: 10px;
+}
+
+#definition, #citation {
+    font-style: italic;
+    text-align: center;
+}
+
+main h1 {
+  color: rgb(255, 0, 0);
+  font-size: 2.0em;
+  font-weight: bold;
+  text-align: center;
+}
+
+main h2 {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline;
+}
+
+main h3 {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-align: left;
+}
+
+main p {
+  text-align: justify;
+}
+
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}
 
 
+/*----------------------------------------------------------------------------------------------------*/
+/* Header */
 /*----------------------------------------------------------------------------------------------------*/
 
 
@@ -84,250 +153,7 @@ header.shrink .header-nav::before {
 
 
 /*----------------------------------------------------------------------------------------------------*/
-
-
-
-
-
-/*----------------------------------------------------------------------------------------------------*/
-
-
-#accueil-1-section {
-    max-width: 1200px;
-    background-color: rgb(255, 255, 255);
-    margin-top: 120px;
-    margin-bottom: 20px; /*Marge du bas*/
-    margin-inline: auto; /*Marge sur le côté, auto pour être au centre*/
-    background-color: rgb(60, 120, 255);
-    padding: 20px; /*Espace autour de des éléments dans section*/
-    border-radius: 10px;
-}
-
-#accueil-2-section {
-    max-width: 1200px;
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    align-items: center;      /* aligne verticalement */
-    gap: 50px;                /* espace entre l’image et le texte */
-    padding: 0px;
-    margin-top: 20px; /*Marge du haut*/
-    margin-bottom: 20px; /*Marge du bas*/
-    margin-inline: auto; /*Marge sur le côté, auto pour être au centre*/
-    background-color: rgb(60, 120, 255);
-    padding: 20px; /*Espace autour de des éléments dans section*/
-    border-radius: 10px;
-}
-
-.section-image {
-    width: 250px;     /* largeur fixe */
-    height: auto;     /* conserve les proportions */
-    border-radius: 10px;
-}
-
-#accueil-2-section-div {
-    flex: 1;                  /* prend le reste de la place */
-}
-
-#accueil-3-section {
-    max-width: 1200px;
-    background-color: rgb(255, 255, 255);
-    border: 2px solid;
-    border-color: rgb(0, 0, 100);
-    border-radius: 10px;
-    margin-top: 20px; /*Marge du haut*/
-    margin-bottom: 20px; /*Marge du bas*/
-    margin-inline: auto; /*Marge sur le côté, auto pour être au centre*/
-    padding: 20px; /*Espace autour de des éléments dans section*/
-    border-radius: 10px;
-}
-
-/*----------------------------------------------------------------------------------------------------*/
-/* carte.html */
-
-#carte-1-section {
-    background-color: rgb(255, 255, 255);
-    border: 2px solid rgb(255, 0, 0); 
-    margin-bottom: 20px; 
-    margin-inline: auto; 
-    margin-top: 120px;
-    max-width: 1200px;
-    padding: 20px;
-}
-
-
-
-
-
-/*----------------------------------------------------------------------------------------------------*/
-/* especes.html */
-
-#especes-1-section {
-    background-color: rgb(255, 255, 255);
-    margin-bottom: 20px; 
-    margin-inline: auto; 
-    margin-top: 120px;
-    max-width: 1200px;
-    padding: 20px;
-}
-
-#especes-2-section {
-    align-items: center; 
-    background-color: rgb(0, 50, 200);
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 0px; 
-    margin-inline: auto; 
-    margin-top: 10px;
-    max-width: 1390px;
-    padding: 0px;
-    padding-left: 10px;
-}
-
-#especes-2-section form {
-    align-items: flex-start; /* aligner en haut */
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 10px;
-}
-
-#especes-2-section form div {
-    background-color: rgb(200, 200, 200);
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;  /* label au-dessus */
-    margin-inline: auto;
-    padding: 10px; 
-}
-
-#especes-2-section button {
-    align-self:last baseline;
-    background-color: rgb(200, 200, 200);
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 10px;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    margin-left: 440px; /* <-- clé pour l’alignement à droite */
-    margin-bottom: 10px;
-    padding: 5px 10px;  
-}
-
-#especes-3-section {
-    background-color: rgb(255, 255, 255);
-    display: grid;
-    gap: 20px; /* espace entre les items */
-    grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
-    margin-bottom: 20px; 
-    margin-inline: auto; 
-    max-width: 1400px;
-    padding: 20px; 
-}
-
-#especes-3-section div {
-    background-color: rgb(0, 50, 200);
-    color:rgb(255, 255, 255);
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 10px;
-    font-weight: bold;
-    margin-inline: auto;
-    padding: 10px; 
-}
-
-#especes-3-section div img {
-    height: auto;
-    border-radius: 10px;
-    width: 100%;
-}
-    
-/* QUIZ */
-fieldset {
-    border: 1px solid #0077b6;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-
-.quiz-informations{
-
-    padding: 10px;
-    border: 2px solid #0077b6; 
-    border-radius: 8px;
-}
-
-
-
-
-#quiz-form{
-
-    width: 100%;
-    margin: 50px auto;
-    background-color: #f0f8ff; 
-    padding: 10px;
-    border: 2px solid #0077b6; 
-    border-radius: 8px;
-    }
-
-#quiz-form h1,#quiz-form h2{
-    text-align: center;
-    color: #0077b6; 
-}
-
-
-.questions-quiz ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-
-.quiz-informations {
-    width: 0%;
-    border: 1px solid #0077b6; 
-    border-radius: 8px;
-    margin: 20px auto;
-    background-color: #f9f9f9;
-    padding: 20px;
-}
-
-
-
-
-
-
-/*----------------------------------------------------------------------------------------------------*/
-
-
-main section p{
-    text-align: center;
-}
-
-main a {
-    text-decoration-line: none;
-    color: rgb(255, 255, 255);
-    border-radius: 10px;
-}
-
-main a:hover {
-    background-color: rgb(0, 191, 255); 
-}
-
-div {
-    margin-top: 10px;
-    margin-bottom: 10px; 
-    margin-inline: auto;
-    background-color: rgb(60, 100, 255);
-    padding: 10px; 
-    border-radius: 10px;
-}
-
-
-#definition, #citation {
-    font-style: italic;
-    text-align: center;
-}
-
-
+/* Footer */
 /*----------------------------------------------------------------------------------------------------*/
 
 
@@ -375,51 +201,279 @@ footer {
     text-align: center;
 }
 
-
 footer ul {
     list-style: none;
 }
 
 footer a {
-    text-decoration-line: underline;
     color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
 footer a:hover {
     color: rgb(255, 0, 0);
+    text-decoration: underline;
 }
 
 
 /*----------------------------------------------------------------------------------------------------*/
+/* Accueil */
+/*----------------------------------------------------------------------------------------------------*/
 
 
-main h1 {
-  color: rgb(255, 0, 0);
-  font-size: 2.0em;
-  font-weight: bold;
-  text-align: center;
+#accueil-1-section {
+    max-width: 1200px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 120px;
+    margin-bottom: 20px; /*Marge du bas*/
+    margin-inline: auto; /*Marge sur le côté, auto pour être au centre*/
+    padding: 20px; /*Espace autour de des éléments dans section*/
 }
 
-main h2 {
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-  text-align: center;
-  text-decoration: underline;
+#accueil-1-section h1 {
+    color:rgb(0, 0, 100);
 }
 
-main h3 {
-  color: rgb(0, 0, 0);
-  font-weight: bold;
-  text-align: left;
+#accueil-2-section {
+    max-width: 1200px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;      /* aligne verticalement */
+    gap: 50px;                /* espace entre l’image et le texte */
+    padding: 0px;
+    margin-top: 20px; /*Marge du haut*/
+    margin-bottom: 20px; /*Marge du bas*/
+    margin-inline: auto; /*Marge sur le côté, auto pour être au centre*/
+    background-color: rgb(60, 120, 255);
+    padding: 20px; /*Espace autour de des éléments dans section*/
+    border-radius: 10px;
 }
 
-main p {
-  text-align: justify;
+.section-image {
+    width: 250px;     /* largeur fixe */
+    height: auto;     /* conserve les proportions */
+    border-radius: 10px;
 }
 
-.right {
-  text-align: right;
+#accueil-2-section-div {
+    flex: 1;                  /* prend le reste de la place */
+}
+
+#accueil-3-section {
+    max-width: 1200px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px; /*Marge du haut*/
+    margin-bottom: 20px; /*Marge du bas*/
+    margin-inline: auto; /*Marge sur le côté, auto pour être au centre*/
+    padding: 20px; /*Espace autour de des éléments dans section*/
+    border-radius: 10px;
+}
+
+#accueil-3-section ul {
+    list-style: none;
+    padding-left: 0; /* Pour enlever le retrait des puces */
+    margin-left: 0;
+}
+
+#accueil-3-section h2 {
+    color:rgb(0, 0, 100);
+    text-decoration: none;
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+/* Espèces */
+/*----------------------------------------------------------------------------------------------------*/
+
+
+#especes-1-section {
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 20px; 
+    margin-inline: auto; 
+    margin-top: 120px;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+#especes-2-section {
+    align-items: center; 
+    background-color: rgb(0, 50, 200);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0px; 
+    margin-inline: auto; 
+    margin-top: 10px;
+    max-width: 1390px;
+    padding: 0px;
+    padding-left: 10px;
+}
+
+#especes-2-section form {
+    align-items: flex-start; /* aligner en haut */
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+#especes-2-section form div {
+    background-color: rgb(200, 200, 200);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;  /* label au-dessus */
+    margin-inline: auto;
+    padding: 10px; 
+    margin: 10px;
+}
+
+#especes-2-section button {
+    align-self:last baseline;
+    background-color: rgb(200, 200, 200);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    margin-left: 360px; /* <-- clé pour l’alignement à droite */
+    margin-bottom: 10px;
+    padding: 5px 10px;  
+}
+
+#especes-3-section {
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    gap: 20px; /* espace entre les items */
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
+    margin-bottom: 20px; 
+    margin-inline: auto; 
+    max-width: 1400px;
+    padding: 20px; 
+}
+
+#especes-3-section div {
+    background-color: rgb(0, 50, 200);
+    color:rgb(255, 255, 255);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    font-weight: bold;
+    margin-inline: auto;
+    padding: 10px; 
+}
+
+#especes-3-section div img {
+    height: auto;
+    border-radius: 10px;
+    width: 100%;
+}
+    
+
+/*----------------------------------------------------------------------------------------------------*/
+/* Carte */
+/*----------------------------------------------------------------------------------------------------*/
+
+
+#carte-1-section {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 0, 0); 
+    border-radius: 10px;
+    margin-bottom: 20px; 
+    margin-inline: auto; 
+    margin-top: 120px;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+section.map-container {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 900px;
+    background-color: #f9f9f9;
 }
 
 
 /*----------------------------------------------------------------------------------------------------*/
+/* Quiz */
+/*----------------------------------------------------------------------------------------------------*/
+
+
+fieldset {
+    border: 1px solid #0077b6;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.quiz-informations{
+
+    padding: 10px;
+    border: 2px solid #0077b6; 
+    border-radius: 8px;
+}
+
+#quiz-form{
+
+    width: 100%;
+    margin: 50px auto;
+    background-color: #f0f8ff; 
+    padding: 10px;
+    border: 2px solid #0077b6; 
+    border-radius: 8px;
+    }
+
+#quiz-form h1,#quiz-form h2{
+    text-align: center;
+    color: #0077b6; 
+}
+
+.questions-quiz ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.quiz-informations {
+    width: 0%;
+    border: 1px solid #0077b6; 
+    border-radius: 8px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+
+/*----------------------------------------------------------------------------------------------------*/
+/* A propos */
+/*----------------------------------------------------------------------------------------------------*/
+
+
+#apropos-1-section {
+    max-width: 1200px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 120px;
+    margin-bottom: 20px; 
+    margin-inline: auto;
+    padding: 20px;
+}
+
+#apropos-1-section ul {
+    list-style: none;
+    padding-left: 0; 
+    margin-left: 0;
+    text-align: right;
+}
+
+#apropos-2-section {
+    max-width: 1200px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px; /*Marge du haut*/
+    margin-bottom: 20px; /*Marge du bas*/
+    margin-inline: auto; /*Marge sur le côté, auto pour être au centre*/
+    padding: 20px; /*Espace autour de des éléments dans section*/
+    border-radius: 10px;
+}

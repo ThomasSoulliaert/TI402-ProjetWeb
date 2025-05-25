@@ -2,12 +2,16 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>À propos</title>
-        <link rel="icon" type="image/png" href="../img/logo.png">
+        <title>Carte</title>
         <link rel="stylesheet" href="../css/styles.css">
+        <title>Carte Interactive</title>
+        <link rel="icon" type="image/png" href="../img/logo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Feuille de style Leaflet -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
     </head>
 
-<body>
+    <body>
         <header>
             <nav class="header-nav">
                 <a href="accueil.html">Accueil</a>
@@ -19,24 +23,9 @@
         </header>
 
         <main>
-            <section id="apropos-1-section">
-                <h1>Pourquoi ce projet ?</h1>
-                <div id="div">
-                    <p>Etudiants en deuxième année de classe préparatoire à EFREI-Paris, nous sommes deux étudiants qui avons codé notre premier site web avec des notions de HTML, CSS et Javascript. Ce projet a été réalisé dans le but de sensibiliser le public à la richesse et à la fragilité de la faune marine. En mettant en lumière différentes espèces menacées, disparues ou peu connues, il vise à encourager la protection des océans et la préservation de la biodiversité. Enfin, ce projet nous a permis de découvrir le monde du web et nous avons pris beaucoup de plaisir à le développer.</p>
-                    <ul>
-                        <li>SOULLIAERT Thomas, YE Lucas</li>
-                        <li>Promo 2028 - P2 Gr. D</li>
-                        <li>Professeur : NACEUR Maha</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="apropos-2-section">
-                <h1>ChatBot</h1> 
-                <div id="div">
-                    
-                </div>
-  
+            <section id="carte-1-section">
+                <h1>Carte Interactive OpenStreetMap</h1>
+                <iframe src="leaflet.html" width="100%" height="500" style="border: none"></iframe>
             </section>
         </main>
 
