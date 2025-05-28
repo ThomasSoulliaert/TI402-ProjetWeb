@@ -94,13 +94,13 @@ header {
 .header-nav {
     display: flex;
     text-align: center;    
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: space-evenly; /* Items espacés également */
+    align-items: center; /* Aligner les items sur le centre */
     height: 100px; /* Hauteur initiale */
     background-image: url("../img/sea.jpg");
-    background-size: cover;
+    background-size: cover; 
     background-position: center;
-    transition: height 0.3s ease, background-color 0.3s ease, background-image 0.3s ease;
+    transition: height 0.3s ease, background-color 0.3s ease, background-image 0.3s ease; /* Transition lorsqu'on scroll la page */
     position: relative;
 }
 
@@ -129,7 +129,7 @@ header.shrink .header-nav {
 
 header.shrink .header-nav a {
     color: rgb(0, 0, 100);
-    font-size: 1.0em;
+    font-size: 1.0em; /* Taille de police réduite lors du scroll */
 }
 
 .header-nav::before {
@@ -137,18 +137,19 @@ header.shrink .header-nav a {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100%; /* Largeur totale du conteneur */
+    height: 100%; /* Hauteur totale du conteneur */
     background-image: url("../img/sea.jpg");
-    background-size: cover;
-    background-position: center;
+    background-size: cover; /* Image qui couvre l'ensemble du conteneur */
+    background-position: center; /* Image centrée */
     opacity: 1;
     transition: opacity 2s ease;
     z-index: -1; /* Derrière les liens */
 }
 
+/* Lorsque le header est réduit, on cache le pseudo-élément */
 header.shrink .header-nav::before {
-    opacity: 0;
+    opacity: 0; /* Rend l’image transparente progressivement */
 }
 
 
