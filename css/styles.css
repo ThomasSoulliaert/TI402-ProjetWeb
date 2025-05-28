@@ -19,7 +19,7 @@ main section p{
 
 main a {
     text-decoration-line: none;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 100);
     border-radius: 10px;
 }
 
@@ -510,14 +510,4 @@ fieldset {
     padding-left: 0; 
     margin-left: 0;
     text-align: right;
-}
-
-#apropos-2-section {
-    max-width: 1200px;
-    background-color: rgb(255, 255, 255);
-    margin-top: 20px; /*Marge du haut*/
-    margin-bottom: 20px; /*Marge du bas*/
-    margin-inline: auto; /*Marge sur le côté, auto pour être au centre*/
-    padding: 20px; /*Espace autour de des éléments dans section*/
-    border-radius: 10px;
 }

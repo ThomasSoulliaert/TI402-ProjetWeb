@@ -12,7 +12,6 @@ document.querySelector('#especes-2-section form').addEventListener('change', fun
         const zoneAnimal = animal.getAttribute('dataZone') || '';
         const zoneList = zoneAnimal.split(',').map(z => z.trim());
         
-        
         const tailleAnimal = animal.getAttribute('dataTaille');
 
         const matchFamille = !famille || famille === familleAnimal;
