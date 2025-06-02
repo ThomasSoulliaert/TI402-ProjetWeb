@@ -19,7 +19,7 @@ main section p{
 
 main a {
     text-decoration-line: none;
-    color: rgb(0, 0, 100);
+    color: rgb(255, 0, 0);
     border-radius: 10px;
 }
 
@@ -281,6 +281,31 @@ footer a:hover {
     text-decoration: none;
 }
 
+#carte-1-section {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 0, 0); 
+    border-radius: 10px;
+    margin-bottom: 20px; 
+    margin-inline: auto; 
+    margin-top: 20px;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+section.map-container {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 900px;
+    background-color: #f9f9f9;
+}
 
 /*----------------------------------------------------------------------------------------------------*/
 /* Espèces */
@@ -336,7 +361,7 @@ footer a:hover {
     border-radius: 10px;
     color: rgb(0, 0, 0);
     cursor: pointer;
-    margin-left: 360px; /* <-- clé pour l’alignement à droite */
+    margin-left: 340px; /* <-- clé pour l’alignement à droite */
     margin-bottom: 10px;
     padding: 5px 10px;  
 }
@@ -413,68 +438,16 @@ footer a:hover {
 
 
 /*----------------------------------------------------------------------------------------------------*/
-/* Carte */
-/*----------------------------------------------------------------------------------------------------*/
-
-
-#carte-1-section {
-    background-color: rgb(255, 255, 255);
-    border: 2px solid rgb(255, 0, 0); 
-    border-radius: 10px;
-    margin-bottom: 20px; 
-    margin-inline: auto; 
-    margin-top: 120px;
-    max-width: 1200px;
-    padding: 20px;
-}
-
-#map {
-    height: 500px;
-    width: 100%;
-    margin-top: 20px;
-}
-
-section.map-container {
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 30px auto;
-    max-width: 900px;
-    background-color: #f9f9f9;
-}
-
-
-/*----------------------------------------------------------------------------------------------------*/
 /* Quiz */
 /*----------------------------------------------------------------------------------------------------*/
 
 
-fieldset {
-    border: 1px solid #0077b6;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.quiz-informations{
-
-    padding: 10px;
-    border: 2px solid #0077b6; 
-    border-radius: 8px;
-}
-
-#quiz-form{
-
-    width: 100%;
-    margin: 50px auto;
-    background-color: #f0f8ff; 
-    padding: 10px;
-    border: 2px solid #0077b6; 
-    border-radius: 8px;
-    }
-
-#quiz-form h1,#quiz-form h2{
+#quiz-form h1,
+#quiz-form h2 {
     text-align: center;
-    color: #0077b6; 
+    color: #0077b6;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .questions-quiz ul {
@@ -482,15 +455,47 @@ fieldset {
     padding-left: 0;
 }
 
-.quiz-informations {
-    width: 0%;
-    border: 1px solid #0077b6; 
-    border-radius: 8px;
-    margin: 20px auto;
-    background-color: #f9f9f9;
-    padding: 20px;
+.questions-quiz li {
+    padding: 10px 0;
+    border-bottom: 1px solid #d0e7fb;
+    font-size: 1rem;
+    color: #186dc2;
 }
 
+.questions-quiz li:last-child {
+    border-bottom: none;
+}
+
+button {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 119, 182, 0.2);
+    color: white;
+    margin: 10px 15px 10px 0;
+}
+
+#submit-btn {
+    background: linear-gradient(135deg, #0077b6, #005f8a);
+}
+
+#submit-btn:hover {
+    background: linear-gradient(135deg, #0096c7, #0077b6);
+    box-shadow: 0 6px 15px rgba(0, 119, 182, 0.5);
+}
+
+button[onclick="quizAlert()"] {
+    background: linear-gradient(135deg, #023e8a, #023e8a);
+}
+
+button[onclick="quizAlert()"]:hover {
+    background: linear-gradient(135deg, #0077b6, #023e8a);
+    box-shadow: 0 6px 15px rgba(3, 4, 94, 0.7);
+}
 
 /*----------------------------------------------------------------------------------------------------*/
 /* A propos */
