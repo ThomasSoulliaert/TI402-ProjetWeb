@@ -42,8 +42,12 @@
             </div>
          </fieldset>
 
+         <div style="text-align: center; margin: 20px;">
+            <button type="button" onclick="quizAlert()">Commencer le Quiz</button>
+        </div>
 
-       <form id="quiz-form">
+
+       <form id="quiz-form" style="display:none;">
         <fieldset>
             <legend>Quiz sur les animaux marins</legend>
             <section>
@@ -246,6 +250,9 @@
                             </ul>
                         </li>
                     </ol>
+                    <div>
+                        <button type="button" id="submit-btn">Envoyer</button>
+                    </div>
                 </section>
             </fieldset>
             
@@ -295,6 +302,7 @@
             </section>
         </footer>
 
-        <script src="../javascript/script.js"></script>
+        <script src="../javascript/header.js"></script>
+        <script src="../javascript/quiz.js"></script>
     </body>
 </html>

@@ -442,6 +442,38 @@ section.map-container {
 /*----------------------------------------------------------------------------------------------------*/
 
 
+fieldset {
+    border: 1px solid #0077b6;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #e3f2fd;
+}
+
+.quiz-informations {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    border: 1.5px solid #0077b6;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 3px 6px rgba(0, 119, 182, 0.2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #03396c;
+    text-align: center;
+}
+
+#quiz-form {
+    width: 100%;
+    margin: 50px auto;
+    background-color: #f0f8ff;
+    padding: 25px;
+    border: 2px solid #0077b6;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 119, 182, 0.3);
+}
+
 #quiz-form h1,
 #quiz-form h2 {
     text-align: center;
@@ -496,6 +528,7 @@ button[onclick="quizAlert()"]:hover {
     background: linear-gradient(135deg, #0077b6, #023e8a);
     box-shadow: 0 6px 15px rgba(3, 4, 94, 0.7);
 }
+
 
 /*----------------------------------------------------------------------------------------------------*/
 /* A propos */
